@@ -28,7 +28,7 @@ while i< c and j<g:
              #print ("dicci", j)
     
     
-print(cont)
+print("a contraseña fue forzada en ",  cont, "intentos")
 
 
 
