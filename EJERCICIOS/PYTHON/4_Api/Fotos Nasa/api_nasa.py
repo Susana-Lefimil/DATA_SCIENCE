@@ -1,6 +1,6 @@
 import requests, json
 from string import Template
-url = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=3RbNbXkeVAsNGBsEeeol3iRnilGSqm0pf753mQWU"
+url = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=....."
 
 payload = {}
 headers= {'Content-Type': 'application/json'}
