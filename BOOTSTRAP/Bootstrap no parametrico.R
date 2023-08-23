@@ -9,7 +9,7 @@ library(dplyr)
 dat<- select(d, IMC )
 dat
 
-
+#
 ## DESCRIPCION
 summary(d)
 summary(d$IMC)
@@ -30,7 +30,7 @@ qqline(d$IMC, col='red')
 #shapiro wik
 #n<50
 shapiro.test(d$IMC)
-#el valor de p value es mayor a 0.05, no rechazams¿os h0, la dsitribucion es normal
+#el valor de p value es mayor a 0.05, no rechazamsï¿½os h0, la dsitribucion es normal
 
 ############################################
 ##Datos normales Bootstrap NO parametrico
@@ -77,7 +77,7 @@ getmean <- function(data, index){   # trabajamos con un vector
   e<-mean(datos)
   return(e)
 }
-#Se debe escribir una funcción R con la estadistica que queremos calcular las replicas bootstrap
+#Se debe escribir una funcciï¿½n R con la estadistica que queremos calcular las replicas bootstrap
 #vamos hacer bootstrap de x (muestra original) segun instrucciones de esa funcion getmean con 1000 rep
 b=boot(d$IMC, getmean, R=1000) 
 b
@@ -104,13 +104,13 @@ get.t.test <- function(data, index){
 b=boot(d$IMC, get.t.test, R=1000)
 b
 
-#lo que podemos ver acá es si esa cantidad es probable que sea 0 o no, sacamos intervalos de confianza
+#lo que podemos ver acï¿½ es si esa cantidad es probable que sea 0 o no, sacamos intervalos de confianza
 
 c<-sort(b$t)
 #Intervalo de confianza:
 izquierda<-c[25]
 derecha<-c[975]
-#Si cero no está adentro del intervalo, rechazamos la hipotesis que la media sea cero.
+#Si cero no estï¿½ adentro del intervalo, rechazamos la hipotesis que la media sea cero.
 izquierda
 derecha
 
